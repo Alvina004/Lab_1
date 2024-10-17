@@ -1,4 +1,4 @@
-// Voroshel mutqagrvac erku tveri amenapoqr yndhanur bajanarary
+// Voroshel mutqagrvac erku tveri amenamec yndhanur bajanarary
 
 /*#include <iostream>
 #include <cstdlib>
@@ -25,11 +25,12 @@ int main()
 }
 */
 
-/*Trvac en erku tver, gtnel nranc amenamec yndhanur bazmapatiky*/
+/*Trvac en erku tver, gtnel nranc amenapoqr yndhanur bazmapatiky*/
 #include <iostream>
 using namespace std;
-int algorithm(int , int );
-int maxYndBazm(int , int );
+
+int algorithm(int a, int b);
+int maxYndBazm(int a, int b);
 
 int main() 
 {
@@ -38,14 +39,15 @@ int main()
     cout << "Mutqagreq 2 tver: ";
     cin >> num1 >> num2;
     
-    cout << "Mutqagrvac  " << num1 << " ev " << num2 << " tveri amenamec yndhanur bazmapatiky: " << maxYndBazm(num1, num2) << endl;
+    cout << "Mutqagrvac  " << num1 << " ev " << num2 << " tveri amenapoqr yndhanur bazmapatiky: " << maxYndBazm(num1, num2) << endl;
     
     return 0;
 }
 
-
-//int algorithm(int a, int b)
+int algorithm(int a, int b)
 {
+    a = abs(a); 
+    b = abs(b); 
     while (b != 0) {
         int temp = b;
         b = a % b;
@@ -56,5 +58,5 @@ int main()
 
 int maxYndBazm(int a, int b) 
 {
-    return (a * b) / algorithm(a, b); //haytni banadzev
+    return abs(a * b) / algorithm(a, b); 
 }
